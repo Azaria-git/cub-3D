@@ -6,7 +6,7 @@
 /*   By: aravelom <aravelom@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 14:46:16 by aravelom          #+#    #+#             */
-/*   Updated: 2025/11/13 11:20:45 by marrandr         ###   ########.fr       */
+/*   Updated: 2025/11/19 08:31:13 by aravelom         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # define K_BACKWARDS 's'
 # define K_TO_LEFT 'a'
 # define K_TO_RIGHT 'd'
+# define K_SPACE ' '
 # define NORTH 270
 # define SOUTH 90
 # define EAST 0

@@ -6,7 +6,7 @@
 /*   By: aravelom <aravelom@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 09:29:14 by aravelom          #+#    #+#             */
-/*   Updated: 2025/11/18 16:51:52 by aravelom         ###   ########.fr       */
+/*   Updated: 2025/11/19 14:04:11 by aravelom         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ static int	border_check(char **map, int x, int y, t_data *data)
 		else
 			data->player.orientation = deg_to_rad(180);
 		data->player.pos_x = (double) x + 0.5;
-		data->player.pos_y = (double) y + 0.5;
+		data->player.pos_y = (double) y + 0.0;
 		data->player.map_x = x;
 		data->player.map_y = y;
 	}
@@ -130,6 +130,8 @@ int	map_check(t_data *data)
 		return (1);
 	data->map_height = y;
 	data->map_width = x;
+	data->map_screen_width = x * MINIMAP_TILS;
+	data->map_screen_height = y * MINIMAP_TILS;
 	data->mid_height = SCREEN_HEIGHT / 2;
 	data->fov = deg_to_rad(FOV);
 	data->mi_fov = data->fov / 2;

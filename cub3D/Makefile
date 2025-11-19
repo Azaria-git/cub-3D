@@ -28,6 +28,7 @@ PARSSRC = $(PARSDIR)/map_check.c\
 GRAPHDIR = ./graph
 GRAPHSRC = $(GRAPHDIR)/raycasting.c\
 			$(GRAPHDIR)/raycasting_util.c\
+			$(GRAPHDIR)/trapeze_map.c\
 			$(GRAPHDIR)/draw.c
 
 #event

@@ -6,7 +6,7 @@
 /*   By: aravelom <aravelom@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 08:48:13 by aravelom          #+#    #+#             */
-/*   Updated: 2025/11/18 16:44:48 by aravelom         ###   ########.fr       */
+/*   Updated: 2025/11/19 17:19:23 by aravelom         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,8 +115,14 @@ void	raycasting(t_data *data)
 		col++;
 	}
 	draw_minimap_rotate(data);
+	if (data->show_trapeze)
+	{
+		draw_trapeze_map(data);
+		// draw_trapeze_from_image(data);
+	}
 	mlx_put_image_to_window(data->mlx, data->win, data->img->img_ptr, 0, 0);
 	mlx_put_image_to_window(data->mlx, data->win, data->player_in_minimap.img_ptr
 		, MINIMAP_SIZE / 2 - MINIMAP_TILS / 4
 		, MINIMAP_SIZE / 2 - MINIMAP_TILS / 2);
+	// mlx_put_image_to_window(data->mlx, data->win, data->map_img->img_ptr, 100, 100);
 }

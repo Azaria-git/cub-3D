@@ -6,7 +6,7 @@
 /*   By: aravelom <aravelom@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 08:33:56 by marrandr          #+#    #+#             */
-/*   Updated: 2025/11/18 15:03:36 by aravelom         ###   ########.fr       */
+/*   Updated: 2025/11/19 17:01:11 by aravelom         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ typedef struct s_img
 {
 	void		*img_ptr;
 	char		*addr;
+	int			width;
+	int			height;
 	int			bits_per_pixel;
 	int			line_length;
 	int			endian;
@@ -56,6 +58,9 @@ typedef struct s_texture
 	t_img		img_we;
 	t_img		img_so;
 	t_img		img_ea;
+	t_img       space_tex;
+	t_img       wall_tex;
+	t_img		floor_tex;
 	int			width;
 	int			height;
 	char		*south;
@@ -80,6 +85,11 @@ typedef struct s_data
 	t_img		*map_img;
 	int			map_width;
 	int			map_height;
+	int			map_screen_width;
+	int			map_screen_height;
+	// 	map trapeze
+	t_coord trap_start;
+	int   show_trapeze;
 }				t_data;
 
 #endif

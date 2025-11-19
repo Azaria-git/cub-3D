@@ -6,7 +6,7 @@
 /*   By: aravelom <aravelom@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 10:53:53 by aravelom          #+#    #+#             */
-/*   Updated: 2025/11/18 16:49:40 by aravelom         ###   ########.fr       */
+/*   Updated: 2025/11/19 16:55:08 by aravelom         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void draw_minimap_rotate(t_data *data)
                 color = get_pixel_color(data->map_img, src_x, src_y);
             }
             else
-                color = 0x888888;
+                color = 0x0000ff;
             my_mlx_pixel_put(data->img, pxl.x, pxl.y, color);
             pxl.x++;
         }

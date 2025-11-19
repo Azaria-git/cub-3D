@@ -6,7 +6,7 @@
 /*   By: aravelom <aravelom@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:31:47 by aravelom          #+#    #+#             */
-/*   Updated: 2025/11/18 13:59:56 by aravelom         ###   ########.fr       */
+/*   Updated: 2025/11/19 17:19:12 by aravelom         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,5 @@ double text_x_calculation(t_data *data, t_ray *ray);
 void draw_text(t_data *data, t_ray *ray, int colon);
 int get_pixel_color(t_img *img, int pxl_x, int pxl_y);
 void draw_minimap_rotate(t_data *data);
-
+void draw_trapeze_map(t_data *d);
 #endif
