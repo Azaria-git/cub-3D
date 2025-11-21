@@ -6,7 +6,7 @@
 /*   By: aravelom <aravelom@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 08:33:56 by marrandr          #+#    #+#             */
-/*   Updated: 2025/11/19 17:01:11 by aravelom         ###   ########.fr       */
+/*   Updated: 2025/11/21 11:42:10 by aravelom         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ typedef struct s_texture
 	t_img       space_tex;
 	t_img       wall_tex;
 	t_img		floor_tex;
+	t_img		location_icon;
+	t_img		triangle_icon;
 	int			width;
 	int			height;
 	char		*south;

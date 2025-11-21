@@ -6,7 +6,7 @@
 /*   By: aravelom <aravelom@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 09:30:57 by aravelom          #+#    #+#             */
-/*   Updated: 2025/11/19 17:07:40 by aravelom         ###   ########.fr       */
+/*   Updated: 2025/11/21 11:43:46 by aravelom         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -170,15 +170,23 @@ static void texture_init(t_data *data)
 	data->texture.space_tex.img_ptr = mlx_xpm_file_to_image(data->mlx
 		, "./images/sea.xpm"
 		, &data->texture.space_tex.width
-		, &data->texture.space_tex.width);
+		, &data->texture.space_tex.height);
 	data->texture.wall_tex.img_ptr = mlx_xpm_file_to_image(data->mlx
 		, "./images/map_wall.xpm"
 		, &data->texture.wall_tex.width
-		, &data->texture.wall_tex.width);
+		, &data->texture.wall_tex.height);
 	data->texture.floor_tex.img_ptr = mlx_xpm_file_to_image(data->mlx
 		, "./images/floor.xpm"
 		, &data->texture.floor_tex.width
-		, &data->texture.floor_tex.width);
+		, &data->texture.floor_tex.height);
+	data->texture.location_icon.img_ptr = mlx_xpm_file_to_image(data->mlx
+		, "./images/location_icon.xpm"
+		, &data->texture.location_icon.width
+		, &data->texture.location_icon.height);
+	data->texture.triangle_icon.img_ptr = mlx_xpm_file_to_image(data->mlx
+		, "./images/triangle_icon.xpm"
+		, &data->texture.triangle_icon.width
+		, &data->texture.triangle_icon.height);
 		//
 	data->texture.img_ea.addr = mlx_get_data_addr(data->texture.img_ea.img_ptr
 	, &data->texture.img_ea.bits_per_pixel
@@ -208,6 +216,14 @@ static void texture_init(t_data *data)
 	, &data->texture.floor_tex.bits_per_pixel
 	, &data->texture.floor_tex.line_length
 	, &data->texture.floor_tex.endian);
+	data->texture.location_icon.addr = mlx_get_data_addr(data->texture.location_icon.img_ptr
+	, &data->texture.location_icon.bits_per_pixel
+	, &data->texture.location_icon.line_length
+	, &data->texture.location_icon.endian);
+	data->texture.triangle_icon.addr = mlx_get_data_addr(data->texture.triangle_icon.img_ptr
+	, &data->texture.triangle_icon.bits_per_pixel
+	, &data->texture.triangle_icon.line_length
+	, &data->texture.triangle_icon.endian);
 	creat_img_triangle(data, &data->player_in_minimap, MINIMAP_TILS / 2, MINIMAP_TILS);
 }
 
